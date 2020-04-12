@@ -13,6 +13,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name="com.THREESkate.app.MainActivity"
+            android:configChanges="orientation|screenSize"
             android:label="THREE Skate" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
