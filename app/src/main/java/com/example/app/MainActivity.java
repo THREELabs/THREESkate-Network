@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
         //Improve webView performance Disabled for now
         //mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
-        mWebView.getSettings().setAppCacheEnabled(true); 
+        mWebView.getSettings().setAppCacheEnabled(true); // enables cache
         webSettings.setDomStorageEnabled(true);
 
         // REMOTE RESOURCE
