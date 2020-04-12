@@ -21,8 +21,7 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new com.THREESkate.app.MyWebViewClient());
 
-        //Improve webView performance Disabled for now
-        //mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
+        //Improve webView performance 
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
         mWebView.getSettings().setAppCacheEnabled(true); // enables cache
         webSettings.setDomStorageEnabled(true);
