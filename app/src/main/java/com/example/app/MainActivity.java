@@ -18,21 +18,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         mWebView = findViewById(R.id.activity_main_webview);
         WebSettings webSettings = mWebView.getSettings();
-
-        //Improve webView performance
-        mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
-        mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
-        mWebView.getSettings().setAppCacheEnabled(true); //Enable
-        mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webSettings.setDomStorageEnabled(true);
-
-
-
         webSettings.setJavaScriptEnabled(true);
-        mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.setWebViewClient(new com.THREESkate.app.MyWebViewClient());
+
+        //Improve webView performance Disabled for now
+        //mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
+        //mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
+        // mWebView.getSettings().setAppCacheEnabled(true); //Enable
+        // mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        // webSettings.setDomStorageEnabled(true);
 
         // REMOTE RESOURCE
-        mWebView.loadUrl("https://threeskate.com/webview/");
+         mWebView.loadUrl("https://threeskate.com/webview/");
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
