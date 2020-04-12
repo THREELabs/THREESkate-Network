@@ -22,10 +22,9 @@ public class MainActivity extends Activity {
         mWebView.setWebViewClient(new com.THREESkate.app.MyWebViewClient());
 
         //Improve webView performance Disabled for now
-        mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
+        //mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
-        mWebView.getSettings().setAppCacheEnabled(true); //Enable
-        mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        mWebView.getSettings().setAppCacheEnabled(true); 
         webSettings.setDomStorageEnabled(true);
 
         // REMOTE RESOURCE
