@@ -3,6 +3,7 @@ package com.THREESkate.app;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -17,6 +18,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         mWebView = findViewById(R.id.activity_main_webview);
         WebSettings webSettings = mWebView.getSettings();
+
+        //Improve webView performance
+        mWebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Sets Priority
+        mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
+        mWebView.getSettings().setAppCacheEnabled(true); //Enable
+        mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webSettings.setDomStorageEnabled(true);
+
+
+
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
 
