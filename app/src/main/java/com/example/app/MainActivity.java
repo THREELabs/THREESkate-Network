@@ -7,9 +7,11 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+
 public class MainActivity extends Activity {
 
     private WebView mWebView;
+
 
     @Override
     @SuppressLint("SetJavaScriptEnabled")
@@ -21,10 +23,10 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new com.THREESkate.app.MyWebViewClient());
 
-        //Improve webView performance 
-        mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
-        mWebView.getSettings().setAppCacheEnabled(true); // enables cache
-        webSettings.setDomStorageEnabled(true);
+        //Improve webView performance
+        //mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Use cache resources if available
+        //mWebView.getSettings().setAppCacheEnabled(true); // enables cache
+       // webSettings.setDomStorageEnabled(true);
 
         // REMOTE RESOURCE
          mWebView.loadUrl("https://threeskate.com/webview/");
@@ -32,6 +34,8 @@ public class MainActivity extends Activity {
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
     }
+
+
 
     @Override
     public void onBackPressed() {
